@@ -1,0 +1,20 @@
+{
+    "name": "Flick - Gesture Swipe Controller",
+    "version": "1.0",
+    "description": "Swipe Shorts using your finger",
+    "manifest_version": 3,
+    "permissions": ["activeTab", "scripting"],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+        "matches": ["*://*.youtube.com/*", "*://*.tiktok.com/*"],
+        "js": ["gesture.js", "content.js"]
+        }
+    ],
+    "host_permissions": [
+        "*://*.youtube.com/*",
+        "*://*.tiktok.com/*"
+    ]
+}

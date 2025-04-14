@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gesture Control</title>
+  </head>
+  <body>
+    <h1>Gesture Controller</h1>
+    <button id="start">Start Camera</button>
+    <script>
+      document.getElementById("start").addEventListener("click", () => {
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+          const tabId = tabs[0].id;
+          chrome.scripting.executeScript({
+            target: { tabId },
+            files: ["gesture.js"],
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
