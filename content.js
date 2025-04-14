@@ -1,8 +1,13 @@
 window.addEventListener("swipe-right", () => {
-    // YouTube Shorts or TikTok next video logic
-    document.dispatchEvent(new KeyboardEvent("keydown", { key: "ArrowRight" }));
+    // For TikTok: Next video
+    document.dispatchEvent(new KeyboardEvent("keydown", { key: "ArrowDown" }));
+    // For YouTube Shorts: Simulate click on 'Next' button
+    // document.querySelector('.next-button-selector').click();
 });
 
 window.addEventListener("swipe-left", () => {
-    document.dispatchEvent(new KeyboardEvent("keydown", { key: "ArrowLeft" }));
+    // For TikTok: Previous video
+    document.dispatchEvent(new KeyboardEvent("keydown", { key: "ArrowUp" }));
+    // For YouTube Shorts: Simulate click on 'Previous' button
+    // document.querySelector('.previous-button-selector').click();
 });
