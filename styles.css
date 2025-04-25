@@ -1,0 +1,87 @@
+body {
+  font-family: "Outfit", Menlo, Monaco, Courier, monospace;
+  background-color: #fafafa;
+}
+
+p {
+  font-weight: 500;
+  font-size: medium;
+  text-align: start;
+}
+
+button {
+  flex: 1;
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 14px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  font-family: "Outfit"
+}
+
+button.start {
+  background-color: #000000;
+  color: white;
+  border-color: #000000;
+}
+
+button.start:hover {
+    background-color: #494b51;
+    color: white;
+    border-color: #494b51;
+  }
+
+button.stop {
+  background-color: white;
+  color: black;
+  border-color: #e7e7e7;
+}
+
+button.stop:hover {
+  background-color: rgb(252, 49, 49);
+  color: white;
+  border-color: red;
+}
+
+.header {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 350px;
+  height: 100%;
+  padding: 12px;
+}
+
+.video-container {
+  /* padding-top: 10px; */
+  padding-bottom: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.button-container {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: full;
+}
+
+#video-canvas {
+  height: 250px;
+  width: 100%;
+  background-color: #e7e7e7;
+  box-sizing: border-box;
+}

@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Gesture Control</title>
+    <title>Flick Through Your Feed</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Gesture Controller</h1>
-    <button id="start">Start Camera</button>
-    <script>
-      document.getElementById("start").addEventListener("click", () => {
-        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-          const tabId = tabs[0].id;
-          chrome.scripting.executeScript({
-            target: { tabId },
-            files: ["gesture.js"],
-          });
-        });
-      });
-    </script>
+    <div class="container">
+      <div class="header">
+        <img src="/assets/logo.png" alt="flick logo" class="logo" width="40px" height="40px" />
+        <p>flick</p>
+      </div>
+      <div class="video-container">
+        <canvas id="video-canvas"></canvas>
+        <video id="video" autoplay playsinline style="display: none;"></video>
+      </div>
+      <div class="button-container">
+        <button class="start" id="start">start camera</button>
+        <button class="stop" id="stop">stop camera</button>
+      </div>
+    </div>
+    <script src="camera.js"></script>
   </body>
 </html>
